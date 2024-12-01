@@ -1,3 +1,7 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 14px;
 	color: #4c5258;
@@ -864,15 +868,6 @@ color: #000;
 	}
 }
 
-
-
-
-
-
-
-
-
-
 .d-flex.w-100.justify-content-between.xdfrt {
     position: absolute;
     top: -58px;
@@ -901,47 +896,6 @@ button.accordion-button {
     border-radius: 100%;
     border: 2px solid red;
 }
-
-/* .employee-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.employee-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.employee-details span {
-    display: block;
-    font-weight: bold;
-}
-.edit-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.edit-button i {
-    font-size: 18px;
-} */
-
 
 .employee-card {
     border: 1px solid #e0e0e0;
@@ -1017,55 +971,99 @@ button.accordion-button {
     flex-grow: 1;
 }
 
-.card {
-    border: 1px solid #dee2e6;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.card-header {
-    background-color: #fff;
-    font-weight: bold;
+.custom-card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-card-header {
+    background-color: #f9f9f9;
     padding: 15px;
-}
-
-.list-group-item {
+    font-size: 1.2rem;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
-    padding: 15px 20px;
-}
+  }
 
-.btn-announcement {
+  .custom-header-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  .custom-list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .custom-list-item {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .custom-list-item:last-child {
+    border-bottom: none;
+  }
+
+  .custom-item-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-item-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .custom-item-time {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  .custom-action-icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .custom-action-icons i.text-primary {
+    color: #007bff !important;
+  }
+
+  .custom-footer-link {
     display: block;
     text-align: center;
-    color: #007bff;
+    padding: 20px 0;
     font-weight: bold;
-    margin-top: 10px;
+    color: #007bff;
     text-decoration: none;
-}
+  }
 
-.btn-announcement:hover {
+  .custom-footer-link:hover {
     text-decoration: underline;
-}
-
+  }
 /* Attendance Styles */
 .attendance-section {
-    padding: 20px;
+    padding: 10px;
 }
 
 .attendance-title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .attendance-card {
     border: 1px solid #dee2e6;
-    border-radius: 8px;
+    border-radius: 4px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
 }
 
@@ -1087,7 +1085,7 @@ button.accordion-button {
 }
 .bx {
     font-family: boxicons !important;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
     font-variant: normal;
     line-height: inherit;
@@ -1096,7 +1094,9 @@ button.accordion-button {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-*, ::after, ::before {
-    box-sizing: border-box;
-}
 
+
+.list-group-item:hover{
+    background-color: #fff !important;
+    color: #000 !important;
+}
